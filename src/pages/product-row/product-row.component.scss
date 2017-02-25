@@ -2,7 +2,8 @@
     text-align: center;
 }
 .border {
-    width: 30%;
+    width: inherit;
+    display: inline-block;
     border: 1px solid rgba(163, 51, 200, 0.41);
     border-radius: 5px;
 }

@@ -7,9 +7,9 @@
     <ion-card-title class="bold">
       ${{ product.price }}
     </ion-card-title>
-
-    SKU #{{ product.sku }}
     <br>
+    SKU #{{ product.sku }}
+    <br><br>
     <span *ngFor="let name of product.department; let i=index">
       <a href="#">{{ name }}</a>
       <span>
