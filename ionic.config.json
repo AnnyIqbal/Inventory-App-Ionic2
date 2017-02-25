@@ -1,0 +1,6 @@
+{
+  "name": "InventoryApp",
+  "app_id": "invapp",
+  "v2": true,
+  "typescript": true
+}

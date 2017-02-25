@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Store
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div> 
+    <app-products-list [productList]="product" [store]="true" (wishedProduct)="navigate($event)"></app-products-list> 
+  </div>
+</ion-content>
