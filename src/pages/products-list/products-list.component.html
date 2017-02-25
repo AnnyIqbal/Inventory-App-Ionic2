@@ -1,8 +1,6 @@
-<div>
   <app-product-row 
     *ngFor="let myProduct of productList" 
     [product]="myProduct" 
     [inStore]="store"
     (wishedProduct)="productWasSelected($event)">
   </app-product-row>
-</div> 

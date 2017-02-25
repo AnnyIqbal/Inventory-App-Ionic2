@@ -1,34 +1,24 @@
- <div>
-  <div>
-      <br>
-    <app-product-image [product]="product"></app-product-image>
-      <br>
-    <span id="price"> ${{ product.price }} </span>
-  </div>
-  
-  <div>
-    <div class="header" 
-      [ngStyle]="{color:'white', 'background-color':'blue'}" 
-      [style.border]="'3px solid pink'" 
-      [style.font-size.px]="fsize">
-          {{ product.name }}
-    </div>
-  <br>
-    <div class="product-sku">SKU #{{ product.sku }}</div>
-  <br>
-    <div class="description">
-      <app-product-department [product]="product"></app-product-department>
-    </div>
-  </div>
+<ion-card class="center border">
+  <ion-card-header>
+    <h1> {{ product.name }} </h1>
+  </ion-card-header>
+  <img class="product-image" [src]="product.imageUrl" alt="Image"/>
+  <ion-card-content>
+    <ion-card-title class="bold">
+      ${{ product.price }}
+    </ion-card-title>
 
-  <div *ngIf="inStore">
-  <br><br>
-    <ion-fab right edge>
-      <button ion-fab mini (click)="add2cart(this.product)">
-        <ion-icon name="cart"></ion-icon>
-      </button>
-    </ion-fab>
-  </div>
-</div>
-<br>
-
+    SKU #{{ product.sku }}
+    <br>
+    <span *ngFor="let name of product.department; let i=index">
+      <a href="#">{{ name }}</a>
+      <span>
+        {{i < (product.department.length-1) ? '>' : ''}}
+      </span>
+    </span>
+    <br><br>
+        <button ion-item small icon-left color="danger" class="center" *ngIf="inStore" (click)="add2cart(this.product)">
+          <ion-icon name="cart"></ion-icon> Add to Cart
+        </button>
+  </ion-card-content>
+</ion-card>

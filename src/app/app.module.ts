@@ -4,10 +4,8 @@ import { MyApp } from './app.component';
 import { StorePage } from '../pages/store/store';
 import { WishlistPage } from '../pages/wishlist/wishlist';
 import { TabsPage } from '../pages/tabs/tabs';
-import {ProductDepartmentComponent} from '../pages/product-department/product-department.component';
-import {ProductImageComponent} from '../pages/product-image/product-image.component';
-import {ProductRowComponent} from '../pages/product-row/product-row.component';
-import {ProductsListComponent} from '../pages/products-list/products-list.component';
+import { ProductRowComponent } from '../pages/product-row/product-row.component';
+import { ProductsListComponent } from '../pages/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +13,6 @@ import {ProductsListComponent} from '../pages/products-list/products-list.compon
     StorePage,
     WishlistPage,
     TabsPage,
-    ProductDepartmentComponent,
-    ProductImageComponent,
     ProductRowComponent,
     ProductsListComponent
   ],

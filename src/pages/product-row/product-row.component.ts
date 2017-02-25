@@ -17,4 +17,3 @@ export class ProductRowComponent {
     this.wishedProduct.emit(p);
   }
 }
-
